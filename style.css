@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  background-color: #313131;
+  background-image: radial-gradient(#ffffff 0.65px, transparent 0.65px),
+    radial-gradient(#ffffff 0.65px, #313131 0.65px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+  overflow: hidden;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #95b296;
+  background-image: linear-gradient(#000000 1.4px, transparent 1.4px),
+    linear-gradient(to right, #000000 1.4px, #95b296 1.4px);
+  background-size: 28px 28px;
+  -webkit-clip-path: polygon(50% 15%, 0% 100%, 150% 200%);
+  clip-path: polygon(50% 15%, 0% 100%, 150% 200%);
+}
+
+body::before {
+  content: "";
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(white 1.4px, transparent 1.4px),
+    linear-gradient(to right, white 1.4px, #111111 1.4px);
+  background-size: 28px 28px;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+      5px 11px at 50px 50px,
+      black 10px,
+      transparent 12px
+    ),
+    radial-gradient(
+      13px 20px at 50px 50px,
+      #79b297 10px,
+      #1f1f1f 18px,
+      transparent 20px
+    ),
+    radial-gradient(50px 30px at center, #a80000 40%, transparent 50px),
+    radial-gradient(50px 40px at 50px 50px, black 40px, transparent 50px);
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: eyeAnimation;
+  animation-name: eyeAnimation;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes eyeAnimation {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  5% {
+    -webkit-transform: scale(1.1, 0.05);
+    transform: scale(1.1, 0.05);
+  }
+  10% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes eyeAnimation {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  5% {
+    -webkit-transform: scale(1.1, 0.05);
+    transform: scale(1.1, 0.05);
+  }
+  10% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
